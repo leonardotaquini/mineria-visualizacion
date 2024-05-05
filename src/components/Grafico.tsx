@@ -67,7 +67,7 @@ export const Grafico = ({ stats, meanSpeedByYear }: EstadisticaProps ) => {
 
   return (
     <>
-      <div className="container w-50">
+      <div className=" col-12 col-sm-6 col-lg-6 m-auto">
         <Line data={ lineData } options={ options }/>
         <Bar data={ barData } options={ options }/>
 
