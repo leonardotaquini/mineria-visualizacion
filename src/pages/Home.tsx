@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Spinner } from "../components/Spinner";
 import { Grafico } from "../components/Grafico";
 import { Navbar } from "../components/Navbar";
+import { Sidebar } from "../components/Sidebar";
 
 export const Home = () => {
   const [stats, setStats] = useState({});
@@ -25,13 +26,16 @@ export const Home = () => {
   }, []);
 
   return (
-    <>
+    <main className="vh-100 d-flex flex-column">
       <Navbar />
-      {loading ? (
-        <Spinner />
-      ) : (
-        <Grafico stats={stats} meanSpeedByYear={meanSpeedByYear} />
-      )}
-    </>
+      <div className="h-100 d-flex">
+        <Sidebar/>
+        {
+          loading
+            ? <Spinner />
+            : <Grafico stats={stats} meanSpeedByYear={meanSpeedByYear} />
+        }
+      </div>
+    </main>
   );
 };

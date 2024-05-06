@@ -45,10 +45,7 @@ export const Grafico = ({ stats, meanSpeedByYear }: EstadisticaProps ) => {
     ],
   }
 
-
-
-
-  const options = {
+  const optionsLine = {
     scales: {
       y: {
         title: {
@@ -65,11 +62,29 @@ export const Grafico = ({ stats, meanSpeedByYear }: EstadisticaProps ) => {
     }
   }
 
+
+  const optionsBar = {
+    scales: {
+      y: {
+        title: {
+          display: true,
+          text: 'Velocidad del viento (km/h)'
+        }
+      },
+      x: {
+        title: {
+          display: true,
+          text: 'Estadisticas del viento'
+        }
+      }
+    }
+  }
+
   return (
     <>
       <div className=" col-12 col-sm-6 col-lg-6 m-auto">
-        <Line data={ lineData } options={ options }/>
-        <Bar data={ barData } options={ options }/>
+        <Line data={ lineData } options={ optionsLine }/>
+        <Bar data={ barData } options={ optionsBar }/>
 
       </div>
     </>
