@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import './App.css'
 import { Home } from './pages/Home'
 import { Data } from './pages/Data'
@@ -10,7 +10,6 @@ function App() {
 
 
   return (
-    <BrowserRouter>
       <main className="vh-100 d-flex flex-column">
         <Navbar />
         <div className="h-100 d-flex">
@@ -24,7 +23,6 @@ function App() {
 
         </div>
       </main>
-    </BrowserRouter>
 
   )
 }
