@@ -15,7 +15,7 @@ function App() {
         <Navbar />
         <div className="h-100 d-flex">
           <Sidebar />
-          <div className='container'>
+          <div>
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/data' element={<Data />} />

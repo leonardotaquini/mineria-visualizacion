@@ -1,5 +1,10 @@
 .nav-link {
     text-decoration: none!important;
-    color: #38393a
+    color: #38393a;
     
+    
+}
+#sidebarMenu{
+    background-color: transparent!important;
+    border-right: 1px solid #e9ecef;
 }
