@@ -9,28 +9,13 @@ export const Sidebar = () => {
       <ul className="nav flex-column">
         <li className="nav-item">
           <Link className="nav-link" to="/">
-            Dashboard
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link className="nav-link" to="/orders">
-            Orders
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link className="nav-link" to="/products">
-            Products
-          </Link>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#">
             Reports
-          </a>
+          </Link>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="#">
-            Integrations
-          </a>
+          <Link className="nav-link" to="/data">
+           Data
+          </Link>
         </li>
       </ul>
     </div>

@@ -2,8 +2,8 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Spinner } from "../components/Spinner";
 import { Grafico } from "../components/Grafico";
-import { Navbar } from "../components/Navbar";
-import { Sidebar } from "../components/Sidebar";
+// import { Navbar } from "../components/Navbar";
+// import { Sidebar } from "../components/Sidebar";
 
 export const Home = () => {
   const [stats, setStats] = useState({});
@@ -24,18 +24,14 @@ export const Home = () => {
   useEffect(() => {
     getStats();
   }, []);
-
+;
   return (
-    <main className="vh-100 d-flex flex-column">
-      <Navbar />
-      <div className="h-100 d-flex">
-        <Sidebar/>
+    <section className="vh-100 d-flex flex-column">
         {
           loading
             ? <Spinner />
             : <Grafico stats={stats} meanSpeedByYear={meanSpeedByYear} />
         }
-      </div>
-    </main>
+    </section>
   );
 };
